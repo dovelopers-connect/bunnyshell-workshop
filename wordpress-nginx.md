@@ -29,7 +29,9 @@ Frankfurt
 
 6. Select the operating system
 
+```
 Ubuntu
+```
 
 7. Select Plan
 
@@ -39,13 +41,9 @@ Ubuntu
 
 ## Creating the application
 
-8. Create application
+8. Create application and choose the virtual machine you have previously created
 
-- choose the virtual machine you have previously created
-
-9. Choose the application
-
-Wordpress
+9. Choose the Wordpress application from the list
 
 10. Deploy
 
