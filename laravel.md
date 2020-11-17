@@ -47,6 +47,12 @@ Deployment config file format
 bash
 ```
 
+Generate APP_KEY
+
+```
+php artisan key:generate --show
+```
+
 5. Add deploy steps
 
 
