@@ -53,15 +53,16 @@ Wordpress
 
 12. Install All-in-One WP Migration
 
+```
 Plugins > Add New > Search: All-in-One WP Migration
-
+```
 13. Go to Import
 
 14. We need to change the max upload size
 
-15. SSH into the machine
+- SSH into the machine
 
-16. Locate the php.ini file
+- Locate the php.ini file
 
 ```
 find /etc/ -type f -name php.ini
@@ -70,13 +71,13 @@ find /etc/ -type f -name php.ini
 /etc/php/7.4/fpm/php.ini
 
 
-17. Edit the php settings
+- Edit the php settings
 
 ```
 sudo nano /etc/php/7.4/fpm/php.ini
 ```
 
-Search for the following properties and update them
+- Search for the following properties and update them
 
 ```
 php_value upload_max_filesize 2048M
@@ -86,7 +87,7 @@ php_value max_execution_time 6000
 php_value max_input_time -1
 ```
 
-18. Increase the nginix client_max_body_size
+15. Increase the nginix client_max_body_size
 
 Open the file
 ```
@@ -96,16 +97,16 @@ sudo nano /etc/nginx/nginx.conf
 Search for ```client_max_body_size``` property and update it to ```2048m```
 
 
-18. Restart nginix
+16. Restart nginix
 
 ```
 sudo systemctl restart nginx
 ```
 
-19. Restart php-fpm/php
+17. Restart php-fpm/php
 
 ```
 sudo service php7.4-fpm restart
 ```
 
-20. Upload the wordpress archive
+18. Upload the wordpress archive
