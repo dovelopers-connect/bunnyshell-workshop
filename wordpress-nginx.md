@@ -54,9 +54,11 @@ Ubuntu
 ```
 Plugins > Add New > Search: All-in-One WP Migration
 ```
-13. Go to Import
+13. On the origin website go to Export and download the archive
 
-14. We need to change the max upload size
+14. On the bunnyshell wordpress instance go to Import
+
+15. We need to change the max upload size
 
 - SSH into the machine
 
@@ -85,7 +87,7 @@ php_value max_execution_time 6000
 php_value max_input_time -1
 ```
 
-15. Increase the nginix client_max_body_size
+16. Increase the nginix client_max_body_size
 
 Open the file
 ```
@@ -95,16 +97,16 @@ sudo nano /etc/nginx/nginx.conf
 Search for ```client_max_body_size``` property and update it to ```2048m```
 
 
-16. Restart nginix
+17. Restart nginix
 
 ```
 sudo systemctl restart nginx
 ```
 
-17. Restart php-fpm/php
+18. Restart php-fpm/php
 
 ```
 sudo service php7.4-fpm restart
 ```
 
-18. Upload the wordpress archive
+19. Upload the wordpress archive
