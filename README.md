@@ -7,8 +7,14 @@
 
 ## Hands on projects
 
+### Single VM projects
+
 [Wordpress deployment on nginx](./wordpress-nginx.md)
 
 [Wordpress deployment on openlitespeed](./wordpress-openlitespeed.md)
 
 [Laravel deployment](./laravel.md)
+
+### Scalable infrastructures
+
+[Wordpress deployment](./wordpress-scalable.infrastructure.md)
