@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Bunnyshell workshophandouts](README.md)
+* [Bunnyshell workshop handouts](README.md)
 * [Laravel setup](laravel.md)
 * [Wordpress deployment on nginx](wordpress-nginx.md)
 * [Wordpress deployment on openlitespeed](wordpress-openlitespeed.md)

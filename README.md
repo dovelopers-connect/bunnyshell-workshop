@@ -1,4 +1,4 @@
-# Bunnyshell workshophandouts
+# Bunnyshell workshop handouts
 
 ## Intro
 
