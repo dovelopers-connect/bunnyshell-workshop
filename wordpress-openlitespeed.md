@@ -1,86 +1,82 @@
+# Wordpress deployment on openlitespeed
+
 Wordpress deployment on openlitespeed
 
 ## Creating the virtual machine
 
 1. Create a virtual machine
-
 2. Select Web Server Type
 
-```
+```text
 openlitespeed
 ```
 
-3. Select programming language
+1. Select programming language
 
-```
+```text
 PHP
 ```
-4. Select Database
-```
-MySQL
-```
-5. Select Location - the one closest to your users
 
-```
+1. Select Database
+
+   ```text
+   MySQL
+   ```
+
+2. Select Location - the one closest to your users
+
+```text
 Frankfurt
 ```
-6. Select the operating system
 
-```
+1. Select the operating system
+
+```text
 Ubuntu
 ```
-7. Select Plan
-```
-1 cpu / 1gb
-```
-8. Create application and choose the virtual machine you have previously created
 
-9. Choose the Wordpress application from the list
+1. Select Plan
 
-10. Deploy
+   ```text
+   1 cpu / 1gb
+   ```
 
-11. Login into the wordpress admin
+2. Create application and choose the virtual machine you have previously created
+3. Choose the Wordpress application from the list
+4. Deploy
+5. Login into the wordpress admin
+6. Install All-in-One WP Migration
 
-12. Install All-in-One WP Migration
-
-```
+```text
 Plugins > Add New > Search: All-in-One WP Migration
 ```
 
-13. On the origin website go to Export and download the archive
+1. On the origin website go to Export and download the archive
+2. On the bunnyshell wordpress instance go to Import
+3. Change the php settings to increase the maximum upload size
+4. SSH into the machine
+5. Locate the php.ini file
 
-14. On the bunnyshell wordpress instance go to Import
-
-15. Change the php settings to increase the maximum upload size
-
-- SSH into the machine
-
-- Locate the php.ini file
-
-```
+```text
 find /usr/local/lsws -type f -name php.ini
 ```
 
-- Edit the file
+* Edit the file
 
-```
+```text
 sudo nano /usr/local/lsws/lsphp74/etc/php/7.4/litespeed/php.ini
 ```
 
-- Update the following properties
+* Update the following properties
 
-php_value upload_max_filesize 2048M
-php_value post_max_size 2048M
-php_value max_execution_time 6000
-php_value max_input_time -1
+php\_value upload\_max\_filesize 2048M php\_value post\_max\_size 2048M php\_value max\_execution\_time 6000 php\_value max\_input\_time -1
 
+1. Restart openlitespeed
 
-16. Restart openlitespeed
-
-```
+```text
 sudo /usr/local/lsws/bin/lswsctrl restart
 ```
 
-17. Upload the wordpress archive
+1. Upload the wordpress archive
+2. Make sure you enable the ListSpeed Cache plugin
 
-18. Make sure you enable the ListSpeed Cache plugin
