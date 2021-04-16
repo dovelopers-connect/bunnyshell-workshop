@@ -4,10 +4,6 @@ A scalable infrastructure is comprised by a web server with a load balancer and 
 
 ![horizontal scalable infrastructura](.gitbook/assets/webservers-horizontal-scale.png)
 
-## Web Server
-
-
-
 ## Network file system \(nfs\)
 
 Install NFS
@@ -33,15 +29,4 @@ Export share
 ```text
 sudo exportfs -rav
 ```
-
-## Pricing
-
-| Component | Monthly price |
-| :--- | :--- |
-| Load balancer | $10 |
-| Instances  | $30 |
-| Storage | $10 |
-| Persistance | $20 |
-| Bunnyshell | $49 |
-| **Total** | $110 |
 

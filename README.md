@@ -6,7 +6,7 @@ This workshop is developed in partnership with Bunnyshell, a simple and fast clo
 
 ## Prerequisites
 
-* bunnyshell account with a cloud provider connected.
+* Bunnyshell account with a cloud provider connected.
 * favorite command line tool \(eg. Powershell, Git Bash\).
 
 ## Hands on projects
