@@ -1,10 +1,42 @@
 # Wordpress deployment in a scalable infrastructure
 
-A scalable infrastructure is comprised by a web server with a load balancer and multiple instances that are provisioned in periods with high demand. In order to ensure persistence a database instance is required. Static files are stored in a network file share.
+A scalable infrastructure is comprised by a web server with a load balancer and multiple instances that are provisioned in periods with high demand. In order to ensure persistence a database instance is required. Static files are stored in a network file system \(NFS\).
 
 ![horizontal scalable infrastructura](.gitbook/assets/webservers-horizontal-scale.png)
 
-## Network file system \(nfs\)
+## Web Server
+
+The web server has a load balancer and multiple instances that run the application. Cloud providers ensure the capabilities required to provision the infrastructure.
+
+We will start the configuration by creating a Web Server with one instance. This will allow us to start with the minimal configuration required for the application and new instances will be added based on the snapshot of the master instance.
+
+![A web server running PHP applications with two instances](.gitbook/assets/image.png)
+
+Scaling the infrastructure to match our demand is a matter of increasing the number of instances.
+
+![Scaling](.gitbook/assets/image%20%281%29.png)
+
+Creating the Web Server example
+
+1. Select Programming Language: PHP
+
+2. Select Web Server Type: nginix
+
+3. Select Cloud: DigitalOcean
+
+4. Select Location: Amsterdam
+
+5. Select Operating System: Ubuntu 20.04
+
+6. Select Plan: 2 vCPU /2 GB
+
+Number of Servers: 1
+
+Web Servers Name: web
+
+Provisioning the resoruces will take around 10 minutes. When the operation is completed you should be able to see the load balancer and droplet in Digitalocean's dashboard.
+
+## Network file system VM \(nfs\)
 
 Install NFS
 
@@ -29,4 +61,17 @@ Export share
 ```text
 sudo exportfs -rav
 ```
+
+## Persistence VM
+
+## Pricing
+
+| Component | Monthly price |
+| :--- | :--- |
+| Load balancer | $10 |
+| Instances  | $30 |
+| Storage | $10 |
+| Persistance | $20 |
+| Bunnyshell | $49 |
+| **Total** | $110 |
 
