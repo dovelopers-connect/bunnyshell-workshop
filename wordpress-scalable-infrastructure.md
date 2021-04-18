@@ -75,3 +75,9 @@ sudo exportfs -rav
 | Bunnyshell | $49 |
 | **Total** | $110 |
 
+## Performance improvements
+
+Enable opcache
+
+[https://graspingtech.com/speed-up-wordpress-by-enabling-zend-opcache/](https://graspingtech.com/speed-up-wordpress-by-enabling-zend-opcache/)
+
