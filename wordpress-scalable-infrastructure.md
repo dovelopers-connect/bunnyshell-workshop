@@ -79,5 +79,9 @@ sudo exportfs -rav
 
 Enable opcache
 
-[https://graspingtech.com/speed-up-wordpress-by-enabling-zend-opcache/](https://graspingtech.com/speed-up-wordpress-by-enabling-zend-opcache/)
+{% embed url="https://graspingtech.com/speed-up-wordpress-by-enabling-zend-opcache/" %}
+
+![Before opcache](.gitbook/assets/image%20%282%29.png)
+
+![After opcache](.gitbook/assets/image%20%283%29.png)
 
