@@ -64,6 +64,19 @@ sudo exportfs -rav
 
 ## Persistence VM
 
+## Wordpress config
+
+```php
+if($_SERVER['PHP_SELF']=="/index.php")
+{
+    define('WP_HOME','http://shop.dovelopers.com');
+    define('WP_SITEURL','https://shop.dovelopers.com');
+} else {
+    define('WP_HOME','https://shop.dovelopers.com');
+    define('WP_SITEURL','http://shop.dovelopers.com');
+}
+```
+
 ## Pricing
 
 | Component | Monthly price |
