@@ -40,7 +40,7 @@ Provisioning the resoruces will take around 10 minutes. When the operation is co
 
 Install NFS
 
-```text
+```bash
 sudo apt-get install nfs-kernel-server
 ```
 
@@ -50,7 +50,13 @@ Create a directory
 sudo mkdir /nfsdata
 ```
 
-Edit /etc/exports
+Edit /etc/exports file
+
+```php
+sudo nano /etc/exports
+```
+
+Add the following content at the end of the file and save it
 
 ```text
 /nfsdata 10.0.0.0/8(rw,sync,no_subtree_check,no_root_squash)
