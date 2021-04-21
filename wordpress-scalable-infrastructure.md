@@ -2,7 +2,7 @@
 
 A scalable infrastructure is comprised by a web server with a load balancer and multiple instances that are provisioned in periods with high demand. In order to ensure persistence a database instance is required. Static files are stored in a network file system \(NFS\).
 
-![horizontal scalable infrastructura](.gitbook/assets/webservers-horizontal-scale.png)
+![horizontal scalable infrastructure](.gitbook/assets/webservers-horizontal-scale.png)
 
 ## Web Server
 
@@ -53,7 +53,7 @@ sudo mkdir /nfsdata
 Edit /etc/exports
 
 ```text
-/nfsdata 10.0.0.0/8(rw,sync,no_subtree_check)
+/nfsdata 10.0.0.0/8(rw,sync,no_subtree_check,no_root_squash)
 ```
 
 Export share
