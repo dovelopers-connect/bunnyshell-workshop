@@ -12,6 +12,10 @@ We will start the configuration by creating a Web Server with one instance. This
 
 ![A web server running PHP applications with two instances](.gitbook/assets/image.png)
 
+Scaling the infrastructure to match our demand is a matter of increasing the number of instances.
+
+![Scaling](.gitbook/assets/image%20%281%29.png)
+
 Creating the Web Server example
 
 1. Select Programming Language: PHP
@@ -30,16 +34,7 @@ Number of Servers: 1
 
 Web Servers Name: web
 
-Provisioning the resources will take around 10 minutes. When the operation is completed you should be able to see the load balancer and droplet in Digitalocean's dashboard.
-
-## Persistence VMs
-
-Create two VM that will handle persistence
-
-* web-storage
-* web-db
-
-## Install Wordpress
+Provisioning the resoruces will take around 10 minutes. When the operation is completed you should be able to see the load balancer and droplet in Digitalocean's dashboard.
 
 ## Network file system VM \(nfs\)
 
@@ -73,29 +68,7 @@ Export share
 sudo exportfs -rav
 ```
 
-## Mount NFS
-
-```php
-sudo apt install nfs-common
-```
-
-```php
-sudo showmount --exports <private_ip_of_nfs_server>
-```
-
-Edit /ect/fstab
-
-```php
-<privateip_of_nfs_server>:/nfsdata    /var/www    nfs    defaults,nfsvers=3,noatime    0    0
-```
-
-```php
-sudo mount -a
-```
-
-Scaling the infrastructure to match our demand is a matter of increasing the number of instances.
-
-![Scaling](.gitbook/assets/image%20%281%29.png)
+## Persistence VM
 
 ## Wordpress config
 
