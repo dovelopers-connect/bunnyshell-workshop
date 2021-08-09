@@ -69,7 +69,12 @@ sudo nano /usr/local/lsws/lsphp74/etc/php/7.4/litespeed/php.ini
 
 * Update the following properties
 
-php\_value upload\_max\_filesize 2048M php\_value post\_max\_size 2048M php\_value max\_execution\_time 6000 php\_value max\_input\_time -1
+```text
+php_value upload_max_filesize 2048M 
+php_value post_max_size 2048M 
+php_value max_execution_time 6000 
+php_value max_input_time -1
+```
 
 1. Restart openlitespeed
 
@@ -79,4 +84,42 @@ sudo /usr/local/lsws/bin/lswsctrl restart
 
 1. Upload the wordpress archive
 2. Make sure you enable the ListSpeed Cache plugin
+
+## SSL Checks
+
+Test redirect on http2
+
+```text
+curl --http2 -vI http://
+```
+
+Test https
+
+```text
+curl --http2 -vI https://
+```
+
+## HTTPS Redirect
+
+Add a .htaccess file with the following content
+
+```text
+rewriteCond %{HTTPS} !on
+rewriteCond %{HTTP:X-Forwarded-Proto} !https
+rewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+```
+
+Restart OpenLiteSpeed
+
+```text
+sudo systemctl restart lsws
+```
+
+## Let's encrypt auto renewal
+
+Edit /etc/letsencrypt/cli.ini
+
+```text
+renew-hook systemctl restart lsws
+```
 
