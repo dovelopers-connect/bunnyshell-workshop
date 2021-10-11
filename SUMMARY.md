@@ -1,10 +1,15 @@
 # Table of contents
 
-* [Bunnyshell workshop handouts](README.md)
-* [Laravel setup](laravel.md)
-* [Wordpress deployment on nginx](wordpress-nginx.md)
-* [Wordpress deployment on openlitespeed](wordpress-openlitespeed.md)
-* [Wordpress deployment in a scalable infrastructure](wordpress-scalable-infrastructure.md)
-* [Environment as a Service \(EaaS\)](environment-as-a-service-eaas.md)
-* [Workshops](workshops.md)
+## Bunnyshell
 
+* [Workshops](README.md)
+* [Bunnyshell workshop handouts](bunnyshell/master.md)
+* [Laravel setup](bunnyshell/laravel.md)
+* [Wordpress deployment on nginx](bunnyshell/wordpress-nginx.md)
+* [Wordpress deployment on openlitespeed](bunnyshell/wordpress-openlitespeed/README.md)
+  * [Wordpress deployment in a scalable infrastructure](bunnyshell/wordpress-openlitespeed/wordpress-scalable-infrastructure.md)
+* [Environment as a Service (EaaS)](bunnyshell/environment-as-a-service-eaas.md)
+
+## Google Cloud
+
+* [NodeJS with Kubernetes](google-cloud/nodejs-with-kubernetes.md)
