@@ -15,10 +15,10 @@ This workshop is developed in partnership with Bunnyshell, a simple and fast clo
 
 [Wordpress deployment on nginx](wordpress-nginx.md)
 
-[Wordpress deployment on openlitespeed](wordpress-openlitespeed/)
+[Wordpress deployment on openlitespeed](wordpress-openlitespeed.md)
 
 [Laravel deployment](laravel.md)
 
 ### Scalable infrastructures
 
-[Wordpress deployment](wordpress-openlitespeed/wordpress-scalable-infrastructure.md)
+[Wordpress deployment](wordpress-scalable-infrastructure.md)

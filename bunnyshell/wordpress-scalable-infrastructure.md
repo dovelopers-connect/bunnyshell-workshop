@@ -2,7 +2,14 @@
 
 A scalable infrastructure is comprised by a web server with a load balancer and multiple instances that are provisioned in periods with high demand. In order to ensure persistence a database instance is required. Static files are stored in a network file system (NFS).
 
-![horizontal scalable infrastructure](../../.gitbook/assets/webservers-horizontal-scale.png)
+![horizontal scalable infrastructure](../.gitbook/assets/webservers-horizontal-scale.png)
+
+## Persistence VMs
+
+Create two VM that will handle persistence
+
+* web-storage
+* web-db
 
 ## Web Server
 
@@ -10,7 +17,7 @@ The web server has a load balancer and multiple instances that run the applicati
 
 We will start the configuration by creating a Web Server with one instance. This will allow us to start with the minimal configuration required for the application and new instances will be added based on the snapshot of the master instance.
 
-![A web server running PHP applications with one instance](<../../.gitbook/assets/image (4).png>)
+![A web server running PHP applications with one instance](<../.gitbook/assets/image (4).png>)
 
 Creating the Web Server example
 
@@ -32,16 +39,51 @@ Web Servers Name: web
 
 Provisioning the resources will take around 10 minutes. When the operation is completed you should be able to see the load balancer and droplet in Digitalocean's dashboard.
 
-## Persistence VMs
-
-Create two VM that will handle persistence
-
-* web-storage
-* web-db
-
 ## Install Wordpress
 
+## Scale the infrastructure
+
+Scaling the infrastructure to match our demand is a matter of increasing the number of instances.
+
+![Scaling](<../.gitbook/assets/image (1).png>)
+
+## Wordpress config
+
+```php
+if($_SERVER['PHP_SELF']=="/index.php")
+{
+    define('WP_HOME','http://shop.dovelopers.com');
+    define('WP_SITEURL','https://shop.dovelopers.com');
+} else {
+    define('WP_HOME','https://shop.dovelopers.com');
+    define('WP_SITEURL','http://shop.dovelopers.com');
+}
+```
+
+## Pricing
+
+| Component     | Monthly price |
+| ------------- | ------------- |
+| Load balancer | $10           |
+| Instances     | $30           |
+| Storage       | $10           |
+| Persistance   | $20           |
+| Bunnyshell    | $49           |
+| **Total**     | $110          |
+
+## Performance improvements
+
+Enable opcache
+
+{% embed url="https://graspingtech.com/speed-up-wordpress-by-enabling-zend-opcache/" %}
+
+![Before opcache](<../.gitbook/assets/image (2).png>)
+
+![After opcache](<../.gitbook/assets/image (3).png>)
+
 ## Network file system VM (nfs)
+
+This step is optional. You only need to do it if you want to manually configure the nfs
 
 Install NFS
 
@@ -92,41 +134,3 @@ Edit /ect/fstab
 ```php
 sudo mount -a
 ```
-
-Scaling the infrastructure to match our demand is a matter of increasing the number of instances.
-
-![Scaling](<../../.gitbook/assets/image (1).png>)
-
-## Wordpress config
-
-```php
-if($_SERVER['PHP_SELF']=="/index.php")
-{
-    define('WP_HOME','http://shop.dovelopers.com');
-    define('WP_SITEURL','https://shop.dovelopers.com');
-} else {
-    define('WP_HOME','https://shop.dovelopers.com');
-    define('WP_SITEURL','http://shop.dovelopers.com');
-}
-```
-
-## Pricing
-
-| Component     | Monthly price |
-| ------------- | ------------- |
-| Load balancer | $10           |
-| Instances     | $30           |
-| Storage       | $10           |
-| Persistance   | $20           |
-| Bunnyshell    | $49           |
-| **Total**     | $110          |
-
-## Performance improvements
-
-Enable opcache
-
-{% embed url="https://graspingtech.com/speed-up-wordpress-by-enabling-zend-opcache/" %}
-
-![Before opcache](<../../.gitbook/assets/image (2).png>)
-
-![After opcache](<../../.gitbook/assets/image (3).png>)
