@@ -1,8 +1,12 @@
 # Table of contents
 
+## Kubernetes
+
+* [Courses](README.md)
+
 ## Bunnyshell
 
-* [Workshops](README.md)
+* [Workshops](<README (1).md>)
 * [Bunnyshell workshop handouts](bunnyshell/master.md)
 * [Laravel setup](bunnyshell/laravel.md)
 * [Wordpress deployment on nginx](bunnyshell/wordpress-nginx.md)
