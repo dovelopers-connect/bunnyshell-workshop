@@ -3,6 +3,7 @@
 ## Kubernetes
 
 * [Courses](README.md)
+* [Kubernetes Object Model](kubernetes/kubernetes-object-model.md)
 
 ## Bunnyshell
 
