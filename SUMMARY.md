@@ -2,8 +2,9 @@
 
 ## Kubernetes
 
-* [Courses](README.md)
+* [My Learning journey](README.md)
 * [Kubernetes Object Model](kubernetes/kubernetes-object-model.md)
+* [Courses](<README (2).md>)
 
 ## Bunnyshell
 
