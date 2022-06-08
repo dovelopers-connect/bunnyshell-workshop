@@ -6,6 +6,10 @@
 * [Kubernetes Object Model](kubernetes/kubernetes-object-model.md)
 * [Courses](<README (2).md>)
 
+***
+
+* [AWS CLI](aws-cli.md)
+
 ## Bunnyshell
 
 * [Workshops](<README (1).md>)
