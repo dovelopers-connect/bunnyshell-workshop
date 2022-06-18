@@ -4,6 +4,7 @@
 
 * [My Learning journey](README.md)
 * [Kubernetes Object Model](kubernetes/kubernetes-object-model.md)
+* [Cluster setup](kubernetes/cluster-setup.md)
 * [Courses](<README (2).md>)
 
 ***
