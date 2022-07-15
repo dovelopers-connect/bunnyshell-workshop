@@ -17,3 +17,9 @@ List all buckets
 List files in a bucket
 
 `aws s3 ls s3://muses`
+
+`Sync all files in a directory with public read permissions`
+
+```
+aws s3 sync . s3://muses --acl public-read
+```

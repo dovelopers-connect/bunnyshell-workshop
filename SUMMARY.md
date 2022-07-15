@@ -10,8 +10,8 @@
 ## AWS
 
 * [S3 Buckets](aws/s3-buckets.md)
-* [EC2 Instances](aws/ec2-instances/README.md)
-  * [Page 2](aws/ec2-instances/page-2.md)
+* [EC2 Instances](aws/ec2-instances.md)
+* [Lambdas](aws/lambdas.md)
 
 ## Bunnyshell
 
