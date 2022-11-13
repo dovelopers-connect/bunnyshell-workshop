@@ -1,14 +1,7 @@
-# My Learning journey
+# Definitions
 
-**2022-05-28** first exam simulation
+Kubernetes is a tool that allows you to [run](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run) workloads in a cluster of computers called nodes. It automates deployment, scaling and management of containerized applications \[1].
 
-![](<.gitbook/assets/image (5).png>)
+Workloads are abstracted as [Pods](https://kubernetes.io/docs/concepts/workloads/pods/), the most atomical element of the kubernetes architecture, that can group one or more containers.
 
-![](<.gitbook/assets/image (6).png>)
-
-**2022-03-07** purchased Kubernetes for Developers (LFD259) and started practice
-
-**2022-02-14** enrolled to Introduction to Kubernetes
-
-**2022-01-27** attended workshop organized by Cloud Native Bucharest and decided to start the certification journey [https://www.youtube.com/watch?v=8YVnfrwyBSU](https://www.youtube.com/watch?v=8YVnfrwyBSU)
-
+\[1] [https://kubernetes.io/](https://kubernetes.io/)

@@ -1,11 +1,11 @@
-# AWS CLI
+# EC2 Instances
 
 ### EC2 Instances
 
 List instance ids
 
 ```
-INSTANCES=$(aws ec2 describe-instances | jq .Reservations[].Instances[].InstanceId -r); echo $INSTANCES
+INSTANCES=$(aws ec2 describe-instances --filters  "Name=instance-state-name,Values=stopped" | jq .Reservations[].Instances[].InstanceId -r); echo $INSTANCES
 ```
 
 Start instances

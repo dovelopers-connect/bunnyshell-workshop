@@ -2,9 +2,10 @@
 
 ## Kubernetes
 
-* [My Learning journey](README.md)
+* [Definitions](README.md)
 * [Kubernetes Object Model](kubernetes/kubernetes-object-model.md)
 * [Cluster setup](kubernetes/cluster-setup.md)
+* [My Learning journey](<README (1).md>)
 * [Courses](<README (2).md>)
 
 ## AWS
@@ -15,7 +16,7 @@
 
 ## Bunnyshell
 
-* [Workshops](<README (1).md>)
+* [Workshops](<README (1) (1).md>)
 * [Bunnyshell workshop handouts](bunnyshell/master.md)
 * [Laravel setup](bunnyshell/laravel.md)
 * [Wordpress deployment on nginx](bunnyshell/wordpress-nginx.md)
